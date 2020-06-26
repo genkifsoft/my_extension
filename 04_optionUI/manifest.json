@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Change background color with options UI",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "hello_extensions.png"
+  },
+  "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}

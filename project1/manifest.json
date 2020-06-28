@@ -1,0 +1,33 @@
+{
+    "name": "Pull request analytics",
+    "manifest_version": 2,
+    "version": "1.0",
+    "description": "This extension allows you analytics infomation of pull request in github",
+    "icons": {
+        "128": "images/icon.png"
+    },
+    "browser_action": {
+        "default_title": "Pull request analytics",
+        "default_icon": "images/icon.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["scripts/background.js"]
+    },
+    "content_scripts": [
+      {
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": [
+            "scripts/library/jquery.min.js"
+        ],
+        "run_at": "document_start"
+      }
+    ],
+    "permissions": [
+        "activeTab",
+        "background"
+    ],
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com/; object-src 'self'"
+  }
